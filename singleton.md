@@ -45,18 +45,15 @@ Still, it's not go way. Let's try with Sync package
 type DbConnection struct {}
 
 var (
-   mut sync.Mutex
+   dbOnce sync.Once
    conn *DbConnection
 )
 
 func GetConnection() *DbConnection {
-    if conn == nil {
-        mut.Lock()
-        defer mut.Unlock()
-        if conn == nil {
-            conn = &DbConnection{}
-        }
+    dbOnce.Do(func() {
+        conn = &DbConnection{}
     }
+    
     return conn
 }
 ```
