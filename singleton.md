@@ -1,4 +1,4 @@
-# Thread safe singlon
+# Thread Safe Singleton
 
 If it can be singleton, then make it singleton, but do it right.
 First attemp:
