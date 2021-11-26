@@ -19,3 +19,10 @@ go install hello.go
 ```
 
 `go install` does the same thing as `go build` but it put the binary into the package directory ($GOPATH/bin/). `go get` also does the same thing for third-party libraries.
+
+
+## go code coverage
+```bash
+go test -v ./... -mod=mod -parallel 1 -p 1 -coverprofile=coverage.html
+go tool cover -html=coverage.html
+```
