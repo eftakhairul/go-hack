@@ -1,4 +1,4 @@
-### new
+## new
 In Golang the keyword `new` is used to create a new instance of a type.
 ```go
 type User struct {
@@ -12,13 +12,13 @@ This is same as:
 u := &User{}
 ```
 
-### make
+## make
 There is another keyword: `make` that also used to create a new instance of a type. However, it only works with slices, maps, and channel (chan). The reason is that slice, map and chan are data structures. They need to be initialized, otherwise they won't be usable.
 ```go
 u := make([]User, 10)
 ```
 
-### diff between new and make
+## Diff between new and make
 
 `new(User)`: it returns a pointer to type `User` a value of type `*User`, it allocates and zeroes the memory.` new(User)` is equivalent to &User{}.
 
