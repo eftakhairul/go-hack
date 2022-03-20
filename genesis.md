@@ -30,3 +30,9 @@ func main() {
 	fmt.Println(BubbleSort(input))
 }
 ```
+
+What's the difference between interface and any? And why is it useful?
+
+`func GenericFoo[T any](x, y T)` and `func InterfaceyFoo(x, y interface{})`
+
+The difference with the generic version is you're still describing a specific type and what that means is we've still constrained this function to only work with one type. Here, in first function x & y are both the SAME TYPE. In the second function, x & y are both of type interface{} which means we can pass in ANY TYPE.
